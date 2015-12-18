@@ -1,6 +1,6 @@
 .hg*
 # Downloaded and locally built eggs
-eggs
+eggs/*
 scripts/scramble/build
 scripts/scramble/lib
 scripts/scramble/archives
@@ -43,6 +43,7 @@ reports_webapp.pid
 # Config files
 universe_wsgi.ini
 reports_wsgi.ini
+reports.ini
 tool_shed_wsgi.ini
 
 # Config files.
@@ -63,8 +64,6 @@ object_store_conf.xml
 job_metrics_conf.xml
 workflow_schedulers_conf.xml
 config/*
-static/welcome.html.*
-static/welcome.html
 
 # Tool data.
 tool-data/annotation_profiler_options.xml
@@ -83,9 +82,13 @@ tool-data/shared/ucsc/ucsc_build_sites.txt
 tool-data/*.loc
 tool-data/genome/*
 tool-data/*.sample
+tool-data/testtoolshed.g2.bx.psu.edu/
+tool-data/toolshed.g2.bx.psu.edu/
+
 
 # Test output
 test-data-cache
+run_framework_tests.html
 run_functional_tests.html
 run_api_tests.html
 test/tool_shed/tmp/*
@@ -107,7 +110,8 @@ tool-data/shared/jars/
 # CSS build artifacts.
 sprite-*.less
 
-# Local node_modules and bower_components directories
+# JS, Local node_modules, and bower_components directories
+static/scripts/bundled
 node_modules
 bower_components
 
@@ -119,4 +123,3 @@ doc/build
 .DS_Store
 *.rej
 *~
-
