@@ -13,6 +13,14 @@
         ${self.stylesheets()}
         ${self.javascripts()}
         ${self.javascript_app()}
+        
+        <!-- Begin Cookie Consent plugin -->
+        <script type="text/javascript">
+            window.cookieconsent_options = {"message":"The Galaxy Platform uses cookies to ensure you get the best experience using our Service.","dismiss":"Got it!","learnMore":"More info","link":"http://www.paad.pl","theme":"dark-bottom"};
+        </script>
+        <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/1.0.9/cookieconsent.min.js"></script>
+        <!-- End Cookie Consent plugin -->
+        
     </head>
     <body class="inbound">
         ${next.body()}
