@@ -750,6 +750,8 @@ class User( BaseUIController, UsesFormDefinitionsMixin, CreatesUsersMixin, Creat
                                     message=message,
                                     status=status )
 
+    '''
+    # registration disabled
     def __register( self, trans, cntrller, subscribe_checked, **kwd ):
         email = util.restore_text( kwd.get( 'email', '' ) )
         password = kwd.get( 'password', '' )
@@ -820,6 +822,7 @@ class User( BaseUIController, UsesFormDefinitionsMixin, CreatesUsersMixin, Creat
                 message = 'Now logged in as %s.<br><a target="_top" href="%s">Return to the home page.</a>' % ( escape( user.email ), url_for( '/' ) )
                 success = True
         return ( message, status, user, success )
+    '''
 
     def send_verification_email( self, trans, email, username ):
         """
